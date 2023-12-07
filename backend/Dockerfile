@@ -5,13 +5,13 @@ FROM node:14
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY backend/package*.json ./
 
 # Install app dependencies
 RUN npm install
 
 # Copy the current directory contents into the container at /app
-COPY backend/* .
+COPY backend/ .
 
 # Make port 3000 available to the world outside this container
 EXPOSE 3000
