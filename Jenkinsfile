@@ -16,14 +16,14 @@ pipeline {
                 script {
                     // Build and push the backend Docker image
                     docker.build("abdullahkhabir/backend", "-f backend/Dockerfile .")
-                    // docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
-                    //    docker.image("abdullahkhabir/backend").push()
-                    
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
+                        docker.image("abdullahkhabir/backend").push()
+                    }
 
                     // Build and push the frontend Docker image
                     docker.build("abdullahkhabir/frontend", "-f frontend/public/Dockerfile .")
-                    // docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
-                    //    docker.image("abdullahkhabir/frontend").push()
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
+                        docker.image("abdullahkhabir/frontend").push()
                     }
                 }
             }
