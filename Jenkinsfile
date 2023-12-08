@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy with Docker Compose') {
             steps {
                 script {
-                    sh 'docker-compose up -d'
+                    sh 'kubectl apply -f 2-tier-app.yaml'
                 }
             }
         }
