@@ -16,17 +16,15 @@ pipeline {
                 script {
                     // Build and push the backend Docker image
                     // docker.build("abdullahkhabir/backend", "-f backend/Dockerfile .")
-                   // docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
+                    // docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
                     //    docker.image("abdullahkhabir/backend").push()
                     echo "no docker push for this build"
-                    }
 
                     // Build and push the frontend Docker image
-                    //docker.build("abdullahkhabir/frontend", "-f frontend/public/Dockerfile .")
-                    //docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
-                     //   docker.image("abdullahkhabir/frontend").push()
-                     echo "no docker push for this build"
-                    }
+                    // docker.build("abdullahkhabir/frontend", "-f frontend/public/Dockerfile .")
+                    // docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
+                    //    docker.image("abdullahkhabir/frontend").push()
+                    echo "no docker push for this build"
                 }
             }
         }
