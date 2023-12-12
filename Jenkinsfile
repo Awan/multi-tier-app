@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy with Docker Compose') {
             steps {
                 script {
-                    sh 'kubectl apply -f 2-tier-app.yaml'
+                    sh 'echo user doesnt want to learn kubernetes yet'
                 }
             }
         }
