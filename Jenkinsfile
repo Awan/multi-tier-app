@@ -18,13 +18,13 @@ pipeline {
                     // docker.build("abdullahkhabir/backend", "-f backend/Dockerfile .")
                     // docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
                     //    docker.image("abdullahkhabir/backend").push()
-                    echo "no docker push for this build"
+                    sh 'docker-compose up'
 
                     // Build and push the frontend Docker image
                     // docker.build("abdullahkhabir/frontend", "-f frontend/public/Dockerfile .")
                     // docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
                     //    docker.image("abdullahkhabir/frontend").push()
-                    echo "no docker push for this build"
+                    echo "leaving it blank for now"
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy with Docker Compose') {
             steps {
                 script {
-                    sh 'echo user doesnt want to learn kubernetes yet'
+                    sh 'echo hello done'
                 }
             }
         }
